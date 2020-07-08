@@ -54,10 +54,6 @@ client.on('message', message => {
   if (message.content === '게임아 게임 잘해') {
     message.channel.send('~~그래 나는 게임고수~~'); 
   }
-
-  if (message.content.startsWith("ㅋ")) {
-    message.channel.send('ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ');
-  }
 });
 
 client.login(token);
