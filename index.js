@@ -4,6 +4,7 @@ const token = process.env.token;
 
 client.on('ready', () => {
   console.log('켰다.');
+  client.user.setActivity('나 사실 만능이다?', { type: 'WATCHING' })
 });
 
 client.on('message', message => {
