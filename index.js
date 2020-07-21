@@ -63,6 +63,21 @@ client.on('message', message => {
   if (message.content === '게임아 게임 잘해') {
     message.channel.send('~~그래 나는 게임고수~~'); 
   }
+
+  if (!message.guild) return;
+ 
+  if (message.content === "게임아 How Beautiful") {
+    if (message.member.voiceChannel) {
+      message.member.voiceChannel.join()
+        .then(connection => {
+          message.reply("재생한다!");
+          connection.playFile("How Beautiful.mp3");
+        })
+        .catch(console.log);
+    } else {
+      message.reply("널 따라갈건데 너가 보이스채널에 없어.");
+    }
+  }
 });
 
 client.login(token);
