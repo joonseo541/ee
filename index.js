@@ -32,7 +32,7 @@ client.on('message', message => {
   }
 
   if (message.content === '게임아 섭주소') {
-    message.channel.send('사용법 [준서|골파] 이다');
+    message.channel.send('사용법 "게임아 [준서|골파] 섭주소" 이다');
   }
 
   if (message.content.startsWith("?")) {
