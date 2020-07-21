@@ -23,8 +23,16 @@ client.on('message', message => {
     message.channel.send('싫은데?');
   }
 
-  if (message.content === '게임아 섭주소') {
+  if (message.content === '게임아 골파 섭주소') {
     message.channel.send('goldenf17.cf | gf9.kro.kr 이다');
+  }
+
+  if (message.content === '게임아 준서 섭주소') {
+    message.channel.send('joonseo541.kro.kr 이다');
+  }
+
+  if (message.content === '게임아 섭주소') {
+    message.channel.send('사용법 [준서|골파] 이다');
   }
 
   if (message.content.startsWith("?")) {
