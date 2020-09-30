@@ -63,41 +63,8 @@ client.on('message', message => {
   if (message.content === '게임아 게임 잘해') {
     message.channel.send('~~그래 나는 게임고수~~'); 
   }
-
-  if (!message.guild) return;
- 
-  if (message.content === "게임아 How Beautiful") {
-    if (message.member.voiceChannel) {
-      message.member.voiceChannel.join()
-        .then(connection => {
-          message.reply("재생한다!");
-          connection.playFile("How Beautiful.mp3");
-        })
-        .catch(console.log);
-    } else {
-      message.reply("널 따라갈건데 너가 보이스채널에 없어.");
-    }
-  }
   
-  if(message.content == 'embed') {
-    let img = 'https://cdn.discordapp.com/icons/419671192857739264/6dccc22df4cb0051b50548627f36c09b.webp?size=256';
-    let embed = new Discord.RichEmbed()
-      .setTitle('타이틀')
-      .setURL('http://www.naver.com')
-      .setAuthor('나긋해', img, 'http://www.naver.com')
-      .setThumbnail(img)
-      .addBlankField()
-      .addField('Inline field title', 'Some value here')
-      .addField('Inline field title', 'Some value here', true)
-      .addField('Inline field title', 'Some value here', true)
-      .addField('Inline field title', 'Some value here', true)
-      .addField('Inline field title', 'Some value here1\nSome value here2\nSome value here3\n')
-      .addBlankField()
-      .setTimestamp()
-      .setFooter('나긋해가 만듬', img)
-
-    message.channel.send(embed)
-  } else if(message.content == 'embed2') {
+  if(message.content == 'embed2') {
     let helpImg = 'https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png';
     let commandList = [
       {name: 'ping', desc: '현재 핑 상태'},
@@ -114,7 +81,6 @@ client.on('message', message => {
     
     commandList.forEach(x => {
       commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
-    });
 
     embed.addField('Commands: ', commandStr);
 
