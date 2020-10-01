@@ -4,7 +4,7 @@ const token = process.env.token;
 
 client.on('ready', () => {
   console.log('켰다.');
-  client.user.setActivity("'게임봇 도움말'이라고 ", { type: 'PLAYING' })
+  client.user.setActivity("'게임봇 도움말'이라고쳐봐", { type: 'PLAYING' })
 });
 
 client.on('message', message => {
